@@ -1,11 +1,11 @@
 use bevy::prelude::*;
 
-// Marker component for the table background entity
+// Marker component for the background entity
 #[derive(Component)]
-pub struct TableBg;
+pub struct Background;
 
-// Spawn camera + table background on startup
-pub fn spawn_table(mut commands: Commands, windows: Query<&Window>) {
+// Spawn camera + background on startup
+pub fn spawn_background(mut commands: Commands, windows: Query<&Window>) {
     commands.spawn(Camera2d);
 
     let window = windows
@@ -16,6 +16,6 @@ pub fn spawn_table(mut commands: Commands, windows: Query<&Window>) {
     commands.spawn((
         Sprite::from_color(Color::srgb(0.15, 0.4, 0.2), size),
         Transform::default(),
-        TableBg,
+        Background,
     ));
 }
