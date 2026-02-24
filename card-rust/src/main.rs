@@ -7,12 +7,12 @@ fn main() {
     App::new()
         .add_plugins(DefaultPlugins.set(WindowPlugin {
             primary_window: Some(Window {
-                title: "Card games".to_string(),
+                title: "BreaCard games".to_string(),
                 resolution: WindowResolution::new(900, 600),
                 ..default()
             }),
             ..default()
         }))
-        .add_plugins(plugin::GamePlugin)
+        .add_plugins(game::GamePlugin)
         .run();
 }
